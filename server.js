@@ -41,16 +41,13 @@ mongoose.connect(
 
 //set up routes
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
-
 app.use('/auth', authRoutes);
 
 app.use('/api', apiRoutes);
  
 // Handles any requests that don't match the ones above
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  res.send("hello world");
 });
 
 const port = process.env.PORT || 8888;
