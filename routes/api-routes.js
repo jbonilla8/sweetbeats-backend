@@ -27,4 +27,11 @@ router.get('/playlist/:spotifyID', (req, res) => {
     .then(user => res.json(user.playlist))
 })
 
+router.get('/delete-playlist/:playlistID', (req, res) => {
+    User.findOneAndUpdate({'playlist.id': req.params.playlistID}, {
+        $pull: { playlist: {id: req.params.playlistID} }
+    })
+    .then(playlist => res.json(playlist))
+})
+
 module.exports = router;
