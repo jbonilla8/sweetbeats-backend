@@ -6,12 +6,13 @@
 
 ## Prerequisite
 
-* [] Clone the repository using `git clone`.
+* Clone the repository using `git clone`.
 
-* [] Create a `.env` file within the root directory and include the below entries:
+* Create a `.env` file within the root directory and include the below entries:
 
     Obtained from the [Spotify Dashboard](https://developer.spotify.com/dashboard/).
-        ```SPOTIFY_CLIENT_ID=
+        ```
+        SPOTIFY_CLIENT_ID=
         SPOTIFY_CLIENT_SECRET=
         ```
     ```
@@ -21,11 +22,13 @@
     ```
 
     Obtained from the [MongoDB Connect to Cluster](https://account.mongodb.com/account/login?nds=true).
-        ```MONGO_URI=
+        ```
+        MONGO_URI=
         ```
 
     Random character for key generation and age of cookie.
-        ```COOKIE_KEY=
+        ```
+        COOKIE_KEY=
         COOKIE_AGE=
         ```
 
